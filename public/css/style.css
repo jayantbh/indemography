@@ -4,15 +4,21 @@ body {
 body * {
   color: white;
 }
+.collapsible-header {
+  line-height: 64px !important;
+}
+.major-container {
+  position: relative;
+  top: -100px;
+}
 .scale {
   margin-bottom: 30px;
   height: 30px;
   width: 100%;
 }
-.scale ul li {
-  height: 30px;
-  width: 30px;
-  display: inline-block;
+.scale span {
+  line-height: 30px;
+  padding: 0px 10px;
 }
 g {
   cursor: pointer;

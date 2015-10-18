@@ -13,11 +13,13 @@
     <script src="js/moment.min.js" async></script>
 </head>
 <body>
-<div class="container">
+{{> sideNav}}
+<div class="container major-container">
     <h1>InDemography</h1>
-    <h4>Scale: Min - Max</h4>
+    <h4 class="stats-title">Female Teachers per 100 male teachers | <span class="filter">Senior Secondary</span></h4>
     <div class="scale">
-
+        <span class="left">Lower</span>
+        <span class="right">Higher</span>
     </div>
     <div class="current-info"><h5></h5></div>
     {{> indianMap}}
