@@ -1,15 +1,14 @@
 $(document).ready(function () {
-    var scaleLength = $(".scale ul li").length;
-   $.each($(".scale ul li"), function (i, val) {
-       key = parseInt(i*255/scaleLength);
-       c = key;
-       ci = 255-key;
-       colr = parseInt(c);
-       colg = parseInt(c/1.5);
-       colb = parseInt(ci/3);
-       $(val).css("background","rgb("+colr+","+colg+","+colb);
-       //console.log($(val))
-   });
+    var key = 0;
+    var c = key;
+    var ci = 255-key;
+    var colr = parseInt(c);
+    var colg = parseInt(c/1.5);
+    var colb = parseInt(ci/3);
+    var color1 = "rgb("+colr+","+colg+","+colb+")";
+    var color2 = "rgb("+(255-colr)+","+(255-colg)+","+(255-colb)+")";
+    $(".scale").css("background","linear-gradient(to right,"+color1+","+color2+")");
+
     $("g").hover(function (e) {
         var t = e.currentTarget;
         console.log($(t).attr("title"))
@@ -42,11 +41,11 @@ $.getJSON('https://data.gov.in/node/147928/datastore/export/json', function (sta
         }
         else {
             key = parseInt(key/divisor);
-            c = key;
-            ci = 255-key;
-            colr = parseInt(c);
-            colg = parseInt(c/1.5);
-            colb = parseInt(ci/3);
+            var c = key;
+            var ci = 255-key;
+            var colr = parseInt(c);
+            var colg = parseInt(c/1.5);
+            var colb = parseInt(ci/3);
             var stateEl = $("g[title='"+state+"']");
             stateEl.css({"fill":"rgb("+colr+","+colg+","+colb+")","stroke":"rgb("+colr+","+colg+","+colb+")"});
             stateEl.children("path").css({"fill":"rgb("+colr+","+colg+","+colb+")","stroke":"rgb("+colr+","+colg+","+colb+")"});
