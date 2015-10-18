@@ -28,6 +28,7 @@ $(document).ready(function () {
 var maleFemaleTeacherRatio = function (index) {
     $.getJSON('https://data.gov.in/node/147928/datastore/export/json', function (stats) {
         //console.log(stats);
+        $(".loading").hide();
         var max = 0;
         $.each(stats.data, function (i, val) {
             var key = parseInt(val[index]);
