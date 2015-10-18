@@ -1,23 +1,28 @@
-<ul id="slide-out" class="side-nav">
-    <li><a href="/" class="title-text">InDemography</a></li>
-    <li><a href="#!" style="line-height: 32px !important;">Female teachers per 100 male teachers.</a></li>
-    <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-            <li>
-                <a class="collapsible-header">Filter<i class="mdi-navigation-arrow-drop-down"></i></a>
-                <div class="collapsible-body">
-                    <ul class="female-teachers-ratio">
-                        <li><a data-filter="1">Senior Secondary</a></li>
-                        <li><a data-filter="2">Secondary</a></li>
-                        <li><a data-filter="3">Upper Primary</a></li>
-                        <li><a data-filter="4">Primary Schools</a></li>
-                        <li><a data-filter="5">Pre-Primary Schools</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </li>
-</ul>
-<a href="#" data-activates="slide-out" class="button-collapse">
-    <button class="btn-floating btn btn-large indigo darken-1"><i class="mdi-navigation-menu"></i></button>
-</a>
+<div class="slide-out">
+    <ul class="slide-out-nav">
+        <li><a class="title-text">InDemography</a></li>
+		<ul class="no-padding stats-list collapsible collapsible-accordion">
+			<li>
+				<a class="collapsible-header">Male:Female teacher ratio<i
+					class="mdi-navigation-arrow-drop-down"></i></a>
+
+				<div class="collapsible-body">
+					<ul class="female-teachers-ratio">
+						<li><a data-filter="1">Senior Secondary Schools</a></li>
+						<li><a data-filter="2">Secondary Schools</a></li>
+						<li><a data-filter="3">Upper Primary Schools</a></li>
+						<li><a data-filter="4">Primary Schools</a></li>
+						<li><a data-filter="5">Pre-Primary Schools</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+    </ul>
+
+    <a class="slide-out-activator">
+        <button class="btn-floating btn btn-large indigo darken-1"><i class="mdi-navigation-menu"></i></button>
+    </a>
+</div>
+
+
+<div class="overlay"></div>

@@ -1,46 +1,129 @@
-body{
-  background: #000;
-  *{
-    color: white;
-  }
+body {
+	background: #000;
+	* {
+		color: white;
+	}
 }
-.header-container{
-  position: fixed;
-  top: 0;
-  left: 7.5%;
-  right: 7.5%;
-  margin: auto;
+
+.all-transition{
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 }
-.collapsible-header{
-  line-height: 64px !important;
+
+.header-container {
+	position: fixed;
+	top: 0;
+	left: 7.5%;
+	right: 7.5%;
+	margin: auto;
 }
-.button-collapse{
-  position: fixed;
-  top: 20px;
-  left: 20px;
+
+.button-collapse {
+	position: fixed;
+	top: 20px;
+	left: 20px;
 }
-.major-container{
-  position: relative;
-  top: -100px;
+
+.major-container {
+	position: relative;
+	top: -100px;
 }
-.map{
-  margin-top: 280px;
+
+.map {
+	margin-top: 280px;
 }
-.scale{
-  margin-bottom: 30px;
-  height: 30px;
-  width: 100%;
-  span{
-    line-height: 30px;
-    padding: 0px 10px;
-  }
+
+.scale {
+	margin-bottom: 30px;
+	height: 30px;
+	width: 100%;
+	span {
+		line-height: 30px;
+		padding: 0px 10px;
+	}
 }
-g{
-  cursor: pointer;
-  outline: whitesmoke;
-  path{
-    fill: inherit;
-    stroke: inherit;
-    color: inherit;
-  }
+
+g {
+	cursor: pointer;
+	outline: whitesmoke;
+	path {
+		fill: inherit;
+		stroke: inherit;
+		color: inherit;
+	}
+}
+
+.slide-out {
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: -380px;
+	//left: 0;
+	height: 100%;
+	.slide-out-nav {
+		background: #3949ab;
+		height: 100%;
+		width: 380px;
+		.title-text {
+			font-size: 3rem;
+			text-align: center;
+			margin: 20px;
+			line-height: 4rem;
+		}
+		.stats-list {
+			border: none;
+			> li{
+				.all-transition;
+				&:hover{
+					background: darken(#3949ab, 20%);
+				}
+			}
+			.collapsible-header{
+				line-height: 3rem !important;
+				min-height: unset;
+				vertical-align: middle;
+				border: none;
+				font-size: 1.5rem;
+				display: inline-block;
+				background-color: rgba(0, 0, 0, 0);
+			}
+
+			.collapsible-body{
+				border: none;
+				li{
+					background-color: #3949ab;
+					.all-transition;
+					&:hover{
+						background: darken(#3949ab, 20%);
+					}
+				}
+				a{
+					font-size: 1rem;
+					line-height: 1.5rem;
+					padding-left: 40px;
+					width: 100%;
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.slide-out-activator {
+		position: absolute;
+		top: 20px;
+		right: -80px;
+	}
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 1;
 }

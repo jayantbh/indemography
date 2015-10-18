@@ -1,6 +1,22 @@
 $(document).ready(function () {
-    $(".button-collapse").sideNav();
+    var sideNav = $(".slide-out");
+	var speed = 300;
+	$(document).click(function (e) {
+		var inSideNav = $(e.target).parents(".slide-out").length;
+		console.log($(e.target).parents(".slide-out").length)
+		if(!inSideNav){
+			sideNav.animate({"left":"-"+sideNav.width()+"px"},speed).removeClass("active");
+			$(".slide-out-overlay").fadeOut(speed);
+		}
+	});
+    sideNav.click(function (e) {
+		//console.log(e.currentTarget);
+		if (!sideNav.hasClass("active")) {
+			sideNav.animate({"left": "0px"}, speed).addClass("active");
+			$(".slide-out-overlay").fadeIn(speed);
+		}
 
+    });
     var key = 0;
     var c = key;
     var ci = 255-key;
