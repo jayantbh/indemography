@@ -58,9 +58,18 @@ var maleFemaleTeacherRatioFiltered = function (statData, index) {
         var state = val[0];
         if (isNaN(key)) {
             key = 0;
-            $("g[title='"+state+"']").data("title",state+" - Stats Unavailable.");
+            var stateEl = $("g[title='"+state+"']");
+            stateEl.data("title",state+" - Stats Unavailable.");
+            var c = key;
+            var ci = 255-key;
+            var colr = parseInt(0);
+            var colg = parseInt(0);
+            var colb = parseInt(0);
+            var stateEl = stateEl;
+            stateEl.css({"fill":"rgb("+colr+","+colg+","+colb+")","stroke":"rgb("+colr+","+colg+","+colb+")"});
+            stateEl.children("path").css({"fill":"rgb("+colr+","+colg+","+colb+")","stroke":"rgb("+colr+","+colg+","+colb+")"});
         }
-        else {
+        else if(key >= 0){
             key = parseInt(key/divisor);
             var c = key;
             var ci = 255-key;
@@ -71,6 +80,9 @@ var maleFemaleTeacherRatioFiltered = function (statData, index) {
             stateEl.css({"fill":"rgb("+colr+","+colg+","+colb+")","stroke":"rgb("+colr+","+colg+","+colb+")"});
             stateEl.children("path").css({"fill":"rgb("+colr+","+colg+","+colb+")","stroke":"rgb("+colr+","+colg+","+colb+")"});
             stateEl.data("title",state+" - "+value);
+        }
+        else{
+            console.log("Else "+state)
         }
     });
 };
