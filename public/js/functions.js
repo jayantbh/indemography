@@ -15,6 +15,12 @@ $(document).ready(function () {
 			sideNav.animate({"left": "0px"}, speed).addClass("active");
 			$(".slide-out-overlay").fadeIn(speed);
 		}
+		else{
+			if($(e.target).attr("class") == "slide-out-toggle mdi-navigation-menu"){
+				sideNav.animate({"left":"-"+sideNav.width()+"px"},speed).removeClass("active");
+				$(".slide-out-overlay").fadeOut(speed);
+			}
+		}
 
     });
     var key = 0;
