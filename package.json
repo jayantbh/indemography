@@ -1,0 +1,28 @@
+{
+  "name": "indemography",
+  "version": "0.0.1",
+  "description": "An Indian statistics mapping application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "statistics",
+    "indemography",
+    "stats",
+    "chart",
+    "india"
+  ],
+  "author": "Jayant Bhawal",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.3",
+    "hapi": "^11.0.0",
+    "hoek": "^2.16.3",
+    "inert": "^3.1.0",
+    "path": "^0.12.7",
+    "vision": "^3.0.0",
+    "good": "^6.4.0",
+    "good-console": "^5.1.0"
+  }
+}
