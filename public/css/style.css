@@ -14,7 +14,7 @@ body * {
 .header-container {
   position: fixed;
   top: 0;
-  left: 7.5%;
+  left: 100px;
   right: 7.5%;
   margin: auto;
 }
